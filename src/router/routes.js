@@ -24,6 +24,20 @@ const routes = [
     children: [
       { path: 'admin', component: () => import('pages/admin/index.vue') }
     ]
+  },
+  {
+    path: '/',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: 'employee', component: () => import('pages/employee/index.vue') }
+    ]
+  },
+  {
+    path: '/',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: 'owner', component: () => import('pages/owner/index.vue') }
+    ]
   }
 ]
 
